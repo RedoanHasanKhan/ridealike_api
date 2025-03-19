@@ -1,0 +1,2021 @@
+{
+	"info": {
+		"_postman_id": "c40f8749-37d4-4bc4-ba06-bf57f5e9fb05",
+		"name": "RideAlike Http",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20650428",
+		"_collection_link": "https://orange-capsule-971338.postman.co/workspace/My-Workspace~4a83def5-f6f7-4554-89f7-5eb3662e637b/collection/20650428-c40f8749-37d4-4bc4-ba06-bf57f5e9fb05?action=share&source=collection_link&creator=20650428"
+	},
+	"item": [
+		{
+			"name": "Profile",
+			"item": [
+				{
+					"name": "Certn",
+					"item": [
+						{
+							"name": "VerifyWithCertn",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3Njc3NzY5MzcsImlzcyI6IlJpZGVBbGlrZSIsInN1YiI6ImViNzY1Zjg4LTFiMTMtNDZlMC1iMGU1LTU0NWFjMmQ3Y2I0NCIsIlVzZXJJRCI6ImViNzY1Zjg4LTFiMTMtNDZlMC1iMGU1LTU0NWFjMmQ3Y2I0NCIsIlByb2ZpbGVJRCI6Ijg5NjY0ODExLWEwYzYtNDNmZi04MzY5LTY0ZTViYzI2OTg4NiIsIlJvbGVzIjpbInVzZXIiLCJhZG1pbiJdfQ.RMJgZjsKIqj_7stNExFgzZFcCZuLrxr4bJ6Y1rTzdrc",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"CertnData\": {\n    \"request_enhanced_criminal_record_check\": false,\n    \"request_enhanced_identity_verification\": false,\n    \"request_softcheck\": true,\n    \"request_motor_vehicle_records\": true,\n    \"email\": \"fahadpathan56@gmail.com\",\n    \"position_or_property_location\": {\n      \"address\": \"2901 Bayview Ave Suite 9117\",\n      \"city\": \"Toronto\",\n      \"country\": \"CA\",\n      \"county\": \"\",\n      \"postal_code\": \"M2K 1E6\",\n      \"province_state\": \"ON\",\n      \"location_type\": \"Position Location\"\n    },\n    \"enhanced_identity_verification\": {\n      \"id_type\": \"DRIVING_LICENSE\",\n      \"id_frontside_image\": \"https://dlmo3n9sm1sil.cloudfront.net/rid-files/bbc4647a-a11c-4cfd-9ca1-153b1c5109ad_scaled_8e4865d6-3d94-43a8-a767-e4e4489fa3453170320234803925114.jpg\",\n      \"id_backside_image\": \"https://dlmo3n9sm1sil.cloudfront.net/rid-files/5b7b08ce-3891-42ea-9b3c-d9bb44f37f1e_scaled_f59fa46c-f984-4062-8ac8-a2e3cadcda242533781018643781710.jpg\",\n      \"face_image\": \"https://dlmo3n9sm1sil.cloudfront.net/rid-files/f91f471c-1005-461f-be6f-16a1300c3d42_sdefault.png\",\n      \"id_country\": \"CA\"\n    },\n    \"information\": {\n      \"first_name\": \"Mahedi\",\n      \"last_name\": \"Hasan\",\n      \"date_of_birth\": \"1995-1-1\",\n      \"birth_country\": \"CA\",\n      \"gender\": \"M\",\n      \"phone_number\": \"+8800171726364\",\n      \"license_number\": \"A1234-56789-12345\",\n      \"license_prov_state\": \"ON\",\n      \"addresses\": [\n        {\n          \"address\": \"456 Queen St E\",\n          \"city\": \"Toronto\",\n          \"province_state\": \"ON\",\n          \"country\": \"CA\",\n          \"current\": true\n        }\n      ]\n    }\n  },\n  \"ProfileID\": \"89664811-a0c6-43ff-8369-64e5bc269886\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://api.dev.ridealike.com/v1/profile.ProfileService/VerifyWithCertn",
+									"protocol": "http",
+									"host": [
+										"api",
+										"dev",
+										"ridealike",
+										"com"
+									],
+									"path": [
+										"v1",
+										"profile.ProfileService",
+										"VerifyWithCertn"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetCertnApplicantInfo",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3Njg0NTg2MDYsImlzcyI6IlJpZGVBbGlrZSIsInN1YiI6ImViNzY1Zjg4LTFiMTMtNDZlMC1iMGU1LTU0NWFjMmQ3Y2I0NCIsIlVzZXJJRCI6ImViNzY1Zjg4LTFiMTMtNDZlMC1iMGU1LTU0NWFjMmQ3Y2I0NCIsIlByb2ZpbGVJRCI6Ijg5NjY0ODExLWEwYzYtNDNmZi04MzY5LTY0ZTViYzI2OTg4NiIsIlJvbGVzIjpbInVzZXIiLCJhZG1pbiJdfQ.KKPemgiEMSC87mutwf_9LxA5gogHtbgFZ33dXT2TA5I",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"ProfileID\": \"89664811-a0c6-43ff-8369-64e5bc269886\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://api.dev.ridealike.com/v1/profile.ProfileService/GetCertnApplicantInfo",
+									"protocol": "http",
+									"host": [
+										"api",
+										"dev",
+										"ridealike",
+										"com"
+									],
+									"path": [
+										"v1",
+										"profile.ProfileService",
+										"GetCertnApplicantInfo"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "UpdateProfile",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NjY3Mzk3NDksImlzcyI6IlJpZGVBbGlrZSIsInN1YiI6ImViNzY1Zjg4LTFiMTMtNDZlMC1iMGU1LTU0NWFjMmQ3Y2I0NCIsIlVzZXJJRCI6ImViNzY1Zjg4LTFiMTMtNDZlMC1iMGU1LTU0NWFjMmQ3Y2I0NCIsIlByb2ZpbGVJRCI6Ijg5NjY0ODExLWEwYzYtNDNmZi04MzY5LTY0ZTViYzI2OTg4NiIsIlJvbGVzIjpbInVzZXIiXX0.N3N8JkPOyl7yMW0UOws_vtWIGl2MxQRk4ug0_8Sup_0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"ProfileID\": \"89664811-a0c6-43ff-8369-64e5bc269886\",\n  \"Profile\": {\n    \"FirstName\": \"Fahad\",\n    \"LastName\": \"Pathan\",\n    \"ImageID\": \"fake\",\n    \"AboutMe\": \"I am a software engineer with a passion for developing innovative solutions.\",\n    \"Notes\": \"\",\n    \"Age\": \"5000\",\n    \"HeardFrom\": \"LinkedIn\",\n    \"CertnID\": \"fake\"\n  }\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:10009/v1/profile.ProfileService/UpdateProfile",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "10009",
+							"path": [
+								"v1",
+								"profile.ProfileService",
+								"UpdateProfile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SubmitProfile",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NjkyMzM1MjEsImlzcyI6IlJpZGVBbGlrZSIsInN1YiI6ImViNzY1Zjg4LTFiMTMtNDZlMC1iMGU1LTU0NWFjMmQ3Y2I0NCIsIlVzZXJJRCI6ImViNzY1Zjg4LTFiMTMtNDZlMC1iMGU1LTU0NWFjMmQ3Y2I0NCIsIlByb2ZpbGVJRCI6Ijg5NjY0ODExLWEwYzYtNDNmZi04MzY5LTY0ZTViYzI2OTg4NiIsIlJvbGVzIjpbInVzZXIiLCJhZG1pbiJdfQ.po4KCJR7FqrOAYZ4l1S_G64zQrD8ui7tjL2103OMbww",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"ProfileID\": \"89664811-a0c6-43ff-8369-64e5bc269886\",\n    \"IsValid\": true,\n    \"HeardFrom\": \"LinkedIn\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://api.dev.ridealike.com/v1/profile.ProfileService/SubmitProfile",
+							"protocol": "http",
+							"host": [
+								"api",
+								"dev",
+								"ridealike",
+								"com"
+							],
+							"path": [
+								"v1",
+								"profile.ProfileService",
+								"SubmitProfile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SetProfileVerificationStatus",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NzEzOTU3OTUsImlzcyI6IlJpZGVBbGlrZSIsInN1YiI6IjAwNmNjNmMwLTdhNWMtNGYzNi1iMmVmLTIyYjM3YzA4NzIzMSIsIlVzZXJJRCI6IjAwNmNjNmMwLTdhNWMtNGYzNi1iMmVmLTIyYjM3YzA4NzIzMSIsIlByb2ZpbGVJRCI6IjFlMDQxY2VjLWU2YzAtNDFlNy04ZGMwLTIxM2JlZDI0ZWU5NSIsIlJvbGVzIjpbInVzZXIiLCJhZG1pbiJdfQ.URNtE1hIp8oVD7MKa-r5yWqhVFC2Wcd5qlnbU8tU1gc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"ProfileID\": \"89664811-a0c6-43ff-8369-64e5bc269886\",\n    \"VerificationStatus\": \"Blocked\",\n    \"BlockedInfo\": {\n        \"Reason\": \"Unclear image\"\n    },\n    \"EligibilityNotMetInfo\": {\n        \"Reason\": \"You are under aged\"\n    },\n    \"Reason\": \"No reason\",\n    \"UnfinishedRegistrationInfo\": {\n        \"Reason\": \"Image Not Clear\"\n    },\n    \"FutureBucketInfo\": {\n        \"Reason\": \"age below 21\"\n    }\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://api.dev.ridealike.com/v1/profile.ProfileService/SetProfileVerificationStatus",
+							"protocol": "http",
+							"host": [
+								"api",
+								"dev",
+								"ridealike",
+								"com"
+							],
+							"path": [
+								"v1",
+								"profile.ProfileService",
+								"SetProfileVerificationStatus"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetProfile",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NzEzOTU3OTUsImlzcyI6IlJpZGVBbGlrZSIsInN1YiI6IjAwNmNjNmMwLTdhNWMtNGYzNi1iMmVmLTIyYjM3YzA4NzIzMSIsIlVzZXJJRCI6IjAwNmNjNmMwLTdhNWMtNGYzNi1iMmVmLTIyYjM3YzA4NzIzMSIsIlByb2ZpbGVJRCI6IjFlMDQxY2VjLWU2YzAtNDFlNy04ZGMwLTIxM2JlZDI0ZWU5NSIsIlJvbGVzIjpbInVzZXIiLCJhZG1pbiJdfQ.URNtE1hIp8oVD7MKa-r5yWqhVFC2Wcd5qlnbU8tU1gc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"ProfileID\": \"43035179-fe80-4370-86fa-a4a5b366be37\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:10009/v1/profile.ProfileService/GetProfile",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "10009",
+							"path": [
+								"v1",
+								"profile.ProfileService",
+								"GetProfile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetAllProfileByVerificationStatus",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NzEzOTU3OTUsImlzcyI6IlJpZGVBbGlrZSIsInN1YiI6IjAwNmNjNmMwLTdhNWMtNGYzNi1iMmVmLTIyYjM3YzA4NzIzMSIsIlVzZXJJRCI6IjAwNmNjNmMwLTdhNWMtNGYzNi1iMmVmLTIyYjM3YzA4NzIzMSIsIlByb2ZpbGVJRCI6IjFlMDQxY2VjLWU2YzAtNDFlNy04ZGMwLTIxM2JlZDI0ZWU5NSIsIlJvbGVzIjpbInVzZXIiLCJhZG1pbiJdfQ.URNtE1hIp8oVD7MKa-r5yWqhVFC2Wcd5qlnbU8tU1gc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"Limit\": \"-1\",\n    \"Skip\": \"0\",\n    \"VerificationStatus\": \"Submitted\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:10009/v1/profile.ProfileService/GetAllProfileByVerificationStatus",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "10009",
+							"path": [
+								"v1",
+								"profile.ProfileService",
+								"GetAllProfileByVerificationStatus"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetAllProfileV2",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NzI2MTkyMDUsImlzcyI6IlJpZGVBbGlrZSIsInN1YiI6ImViNzY1Zjg4LTFiMTMtNDZlMC1iMGU1LTU0NWFjMmQ3Y2I0NCIsIlVzZXJJRCI6ImViNzY1Zjg4LTFiMTMtNDZlMC1iMGU1LTU0NWFjMmQ3Y2I0NCIsIlByb2ZpbGVJRCI6Ijg5NjY0ODExLWEwYzYtNDNmZi04MzY5LTY0ZTViYzI2OTg4NiIsIlJvbGVzIjpbInVzZXIiLCJhZG1pbiJdfQ.NrAsl4B2WMV5bA50BR4jBBYRxPHqkQBdYY6o5S0Rc6k",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"DateFrom\": \"2024-11-01T08:49:02Z\",\n    \"DateTo\": \"2025-02-28T08:49:02Z\",\n    \"Limit\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:10009/v1/profile.ProfileService/GetAllProfileV2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "10009",
+							"path": [
+								"v1",
+								"profile.ProfileService",
+								"GetAllProfileV2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Car",
+			"item": [
+				{
+					"name": "GetAllCarsV2",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NzI2MTkyMDUsImlzcyI6IlJpZGVBbGlrZSIsInN1YiI6ImViNzY1Zjg4LTFiMTMtNDZlMC1iMGU1LTU0NWFjMmQ3Y2I0NCIsIlVzZXJJRCI6ImViNzY1Zjg4LTFiMTMtNDZlMC1iMGU1LTU0NWFjMmQ3Y2I0NCIsIlByb2ZpbGVJRCI6Ijg5NjY0ODExLWEwYzYtNDNmZi04MzY5LTY0ZTViYzI2OTg4NiIsIlJvbGVzIjpbInVzZXIiLCJhZG1pbiJdfQ.NrAsl4B2WMV5bA50BR4jBBYRxPHqkQBdYY6o5S0Rc6k",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "// {\n//     \"DateFrom\": \"2024-11-01T08:49:02Z\",\n//     \"DateTo\": \"2025-02-28T08:49:02Z\"\n// }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:10002/v1/car.CarService/GetAllCarsV2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "10002",
+							"path": [
+								"v1",
+								"car.CarService",
+								"GetAllCarsV2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SetAbout",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NjcwOTM3NzMsImlzcyI6IlJpZGVBbGlrZSIsInN1YiI6ImRmOTRhZjIyLTBhYTgtNGE1Mi1iOTE5LTkwYzNmNjBiZGYzOCIsIlVzZXJJRCI6ImRmOTRhZjIyLTBhYTgtNGE1Mi1iOTE5LTkwYzNmNjBiZGYzOCIsIlByb2ZpbGVJRCI6IjM1MTA4ZDQxLWYwMDAtNDAwMi04NjU0LTk3MDBjN2E3OTNiZSIsIlJvbGVzIjpbInVzZXIiLCJhZG1pbiJdfQ.a-KiQe5aWzXe4viUfDFyF_TN_zxfVc-FuRPpyYNl630",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"CarID\": \"a8b512f0-91f7-4282-b6cb-ed39b40ac2e9\",\n  \"About\": {\n    \"Year\": \"2024\",\n    \"CarType\": \"SUV\",\n    \"Make\": \"Audi\",\n    \"Model\": \"RAV5\",\n    \"CarBodyTrim\": \"LE\",\n    \"Style\": \"AWD\",\n    \"VehicleDescription\": \"A well-maintained Toyota RAV4 SUV with advanced features.\",\n    \"Location\": {\n      \"Address\": \"123 Main St\",\n      \"FormattedAddress\": \"123 Main St, Springfield, IL 62701, USA\",\n      \"Locality\": \"Springfield\",\n      \"Region\": \"Illinois\",\n      \"PostalCode\": \"62701\",\n      \"LatLng\": {\n        \"Latitude\": 39.7817,\n        \"Longitude\": -89.6501,\n        \"FormattedAddress\": \"123 Main St, Springfield, IL 62701, USA\"\n      },\n      \"Notes\": \"Parked in the garage behind the house.\",\n      \"Geo_Point\": {\n        \"Type\": \"Point\",\n        \"Coordinates\": [\n          -89.6501,\n          39.7817\n        ]\n      }\n    },\n    \"CarOwnedBy\": \"Myself\",\n    \"NeverBrandedOrSalvageTitle\": true,\n    \"Completed\": true,\n    \"MultipleLocation\": [\n      {\n        \"Address\": \"456 Elm St\",\n        \"FormattedAddress\": \"456 Elm St, Chicago, IL 60601, USA\",\n        \"Locality\": \"Chicago\",\n        \"Region\": \"Illinois\",\n        \"PostalCode\": \"60601\",\n        \"LatLng\": {\n          \"Latitude\": 41.8781,\n          \"Longitude\": -87.6298,\n          \"FormattedAddress\": \"456 Elm St, Chicago, IL 60601, USA\"\n        },\n        \"Notes\": \"Stored in a secure parking lot.\",\n        \"Geo_Point\": {\n          \"Type\": \"Point\",\n          \"Coordinates\": [\n            -87.6298,\n            41.8781\n          ]\n        }\n      }\n    ]\n  },\n  \"SaveAndExit\": true\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:10002/v1/car.CarService/SetAbout",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "10002",
+							"path": [
+								"v1",
+								"car.CarService",
+								"SetAbout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetAllCar",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NzI2MTkyMDUsImlzcyI6IlJpZGVBbGlrZSIsInN1YiI6ImViNzY1Zjg4LTFiMTMtNDZlMC1iMGU1LTU0NWFjMmQ3Y2I0NCIsIlVzZXJJRCI6ImViNzY1Zjg4LTFiMTMtNDZlMC1iMGU1LTU0NWFjMmQ3Y2I0NCIsIlByb2ZpbGVJRCI6Ijg5NjY0ODExLWEwYzYtNDNmZi04MzY5LTY0ZTViYzI2OTg4NiIsIlJvbGVzIjpbInVzZXIiLCJhZG1pbiJdfQ.NrAsl4B2WMV5bA50BR4jBBYRxPHqkQBdYY6o5S0Rc6k",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"Limit\": \"0\",\n    \"Skip\": \"0\",\n    \"VerificationStatus\": [\n        \"Verified\"\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:10002/v1/car.CarService/GetAllCar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "10002",
+							"path": [
+								"v1",
+								"car.CarService",
+								"GetAllCar"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Trip",
+			"item": [
+				{
+					"name": "CancelTrip",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NzEzOTU3OTUsImlzcyI6IlJpZGVBbGlrZSIsInN1YiI6IjAwNmNjNmMwLTdhNWMtNGYzNi1iMmVmLTIyYjM3YzA4NzIzMSIsIlVzZXJJRCI6IjAwNmNjNmMwLTdhNWMtNGYzNi1iMmVmLTIyYjM3YzA4NzIzMSIsIlByb2ZpbGVJRCI6IjFlMDQxY2VjLWU2YzAtNDFlNy04ZGMwLTIxM2JlZDI0ZWU5NSIsIlJvbGVzIjpbInVzZXIiLCJhZG1pbiJdfQ.URNtE1hIp8oVD7MKa-r5yWqhVFC2Wcd5qlnbU8tU1gc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"TripID\": \"60d7ce88-f35f-4596-abbf-a1428a8a0ec6\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://api.dev.ridealike.com/v1/trip.TripService/CancelTrip",
+							"protocol": "http",
+							"host": [
+								"api",
+								"dev",
+								"ridealike",
+								"com"
+							],
+							"path": [
+								"v1",
+								"trip.TripService",
+								"CancelTrip"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AcceptTripChangeV2",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NjkwNjQ5OTksImlzcyI6IlJpZGVBbGlrZSIsInN1YiI6ImRlMGQ5MDZkLTliZmUtNDZiMi1hMTM3LTllNDFhY2U0YmJjMSIsIlVzZXJJRCI6ImRlMGQ5MDZkLTliZmUtNDZiMi1hMTM3LTllNDFhY2U0YmJjMSIsIlByb2ZpbGVJRCI6IjU2MDE2OWFjLWUwMzMtNDgxOC1hNDU3LWEwNjUwYjU4OGVhYSIsIlJvbGVzIjpbInVzZXIiXX0.dq0hlH5i-LewbJbwHnz0A1FukYgoHm99WEuw2GNZ_bg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"TripID\": \"5a5d997b-2e1c-4186-828e-b2ac42a0edd4\",\n  \"SuccessURL\": \"https://dev.admin.ridealike.com\",\n  \"FailedURL\": \"https://dev.admin.ridealike.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:10011/v1/trip.TripService/AcceptTripChangeV2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "10011",
+							"path": [
+								"v1",
+								"trip.TripService",
+								"AcceptTripChangeV2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetTripByID",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3Njg0NTg2MDYsImlzcyI6IlJpZGVBbGlrZSIsInN1YiI6ImViNzY1Zjg4LTFiMTMtNDZlMC1iMGU1LTU0NWFjMmQ3Y2I0NCIsIlVzZXJJRCI6ImViNzY1Zjg4LTFiMTMtNDZlMC1iMGU1LTU0NWFjMmQ3Y2I0NCIsIlByb2ZpbGVJRCI6Ijg5NjY0ODExLWEwYzYtNDNmZi04MzY5LTY0ZTViYzI2OTg4NiIsIlJvbGVzIjpbInVzZXIiLCJhZG1pbiJdfQ.KKPemgiEMSC87mutwf_9LxA5gogHtbgFZ33dXT2TA5I",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"TripID\": \"200bc496-1a15-48e7-9074-272f448b4cd0\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.dev.ridealike.com/v1/trip.TripService/GetTripByID",
+							"protocol": "https",
+							"host": [
+								"api",
+								"dev",
+								"ridealike",
+								"com"
+							],
+							"path": [
+								"v1",
+								"trip.TripService",
+								"GetTripByID"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetAllTripV2",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NzI2MTkyMDUsImlzcyI6IlJpZGVBbGlrZSIsInN1YiI6ImViNzY1Zjg4LTFiMTMtNDZlMC1iMGU1LTU0NWFjMmQ3Y2I0NCIsIlVzZXJJRCI6ImViNzY1Zjg4LTFiMTMtNDZlMC1iMGU1LTU0NWFjMmQ3Y2I0NCIsIlByb2ZpbGVJRCI6Ijg5NjY0ODExLWEwYzYtNDNmZi04MzY5LTY0ZTViYzI2OTg4NiIsIlJvbGVzIjpbInVzZXIiLCJhZG1pbiJdfQ.NrAsl4B2WMV5bA50BR4jBBYRxPHqkQBdYY6o5S0Rc6k",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"DateFrom\": \"2024-11-01T08:49:02Z\",\n    \"DateTo\": \"2025-02-28T08:49:02Z\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:10011/v1/trip.TripService/GetAllTripV2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "10011",
+							"path": [
+								"v1",
+								"trip.TripService",
+								"GetAllTripV2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Payment",
+			"item": [
+				{
+					"name": "PayDueAmount",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NjczNTIwMzgsImlzcyI6IlJpZGVBbGlrZSIsInN1YiI6ImViNzY1Zjg4LTFiMTMtNDZlMC1iMGU1LTU0NWFjMmQ3Y2I0NCIsIlVzZXJJRCI6ImViNzY1Zjg4LTFiMTMtNDZlMC1iMGU1LTU0NWFjMmQ3Y2I0NCIsIlByb2ZpbGVJRCI6Ijg5NjY0ODExLWEwYzYtNDNmZi04MzY5LTY0ZTViYzI2OTg4NiIsIlJvbGVzIjpbInVzZXIiLCJhZG1pbiJdfQ.lU4chLgtYYmCrgXrSUQWigb2zPP-BOYQ1MG5_xKIADA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"TripID\": \"070e7773-0a4e-44c9-9df7-eec8c8cb2bdf\",\n  \"SuccessURL\": \"https://dev.admin.ridealike.com\",\n  \"FailedURL\": \"https://dev.admin.ridealike.com\",\n  \"Description\": \"string\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:10008/v1/payment.PaymentService/PayDueAmount",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "10008",
+							"path": [
+								"v1",
+								"payment.PaymentService",
+								"PayDueAmount"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Booking",
+			"item": [
+				{
+					"name": "AcceptManualBookingV2",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3Njc0MjQwMzYsImlzcyI6IlJpZGVBbGlrZSIsInN1YiI6IjE0MWZiYTlkLTFhMjQtNGZhZS1iM2Y4LWE2NzlkOTc3YzEwZSIsIlVzZXJJRCI6IjE0MWZiYTlkLTFhMjQtNGZhZS1iM2Y4LWE2NzlkOTc3YzEwZSIsIlByb2ZpbGVJRCI6IjU1ZmM1M2UyLWM5OWQtNDE5ZS04ZWUwLWYwZmMwYzc0ZmVmOCIsIlJvbGVzIjpbInVzZXIiXX0.g8FPpwlp4irvbE0NxDngUdht5XVVvKBadRZbB6sa2ro",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"BookingID\": \"b65a48a4-4d45-4c5f-b400-3601e7fc75ca\",\n  \"SuccessURL\": \"https://dev.admin.ridealike.com\",\n  \"FailedURL\": \"https://dev.admin.ridealike.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:10000/v1/booking.BookingService/AcceptManualBookingV2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "10000",
+							"path": [
+								"v1",
+								"booking.BookingService",
+								"AcceptManualBookingV2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetBookingByID",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3Njg0NTg2MDYsImlzcyI6IlJpZGVBbGlrZSIsInN1YiI6ImViNzY1Zjg4LTFiMTMtNDZlMC1iMGU1LTU0NWFjMmQ3Y2I0NCIsIlVzZXJJRCI6ImViNzY1Zjg4LTFiMTMtNDZlMC1iMGU1LTU0NWFjMmQ3Y2I0NCIsIlByb2ZpbGVJRCI6Ijg5NjY0ODExLWEwYzYtNDNmZi04MzY5LTY0ZTViYzI2OTg4NiIsIlJvbGVzIjpbInVzZXIiLCJhZG1pbiJdfQ.KKPemgiEMSC87mutwf_9LxA5gogHtbgFZ33dXT2TA5I",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"BookingID\": \"931991d9-4e0f-4a05-b203-1c54b3e14317\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.dev.ridealike.com/v1/booking.BookingService/GetBookingByID",
+							"protocol": "https",
+							"host": [
+								"api",
+								"dev",
+								"ridealike",
+								"com"
+							],
+							"path": [
+								"v1",
+								"booking.BookingService",
+								"GetBookingByID"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetPricing",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NzIyNTk1ODYsImlzcyI6IlJpZGVBbGlrZSIsInN1YiI6IjAwNmNjNmMwLTdhNWMtNGYzNi1iMmVmLTIyYjM3YzA4NzIzMSIsIlVzZXJJRCI6IjAwNmNjNmMwLTdhNWMtNGYzNi1iMmVmLTIyYjM3YzA4NzIzMSIsIlByb2ZpbGVJRCI6IjFlMDQxY2VjLWU2YzAtNDFlNy04ZGMwLTIxM2JlZDI0ZWU5NSIsIlJvbGVzIjpbInVzZXIiLCJhZG1pbiJdfQ.BTLgNfYkgT_RK51lPiLPHR7UI8BuXwREWIdbv7IymAM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"BookingParams\": {\n    \"CarID\": \"c1593fb1-b75a-4c6b-bc90-4cee7c562471\",\n    \"StartDateTime\": \"2025-02-28T10:00:00.000Z\",\n    \"EndDateTime\": \"2025-03-02T12:00:00.000Z\",\n    \"NewStartDateTime\": [],\n    \"NewEndDateTime\": [],\n    \"ReturnLocation\": [],\n    \"PickupReturnLocation\": {\n      \"Address\": \"4 Mohakhali C/A, Dhaka 1212, Bangladesh\",\n      \"FormattedAddress\": \"4 Mohakhali C/A, Dhaka 1212, Bangladesh\",\n      \"LatLng\": {\n        \"Latitude\": 23.781947,\n        \"Longitude\": 90.400584\n      },\n      \"CustomLoc\": true\n    },\n    \"MasterPickUpLocation\": [],\n    \"MasterReturnLocation\": {\n      \"Address\": \"4 Mohakhali C/A, Dhaka 1212, Bangladesh\",\n      \"FormattedAddress\": \"4 Mohakhali C/A, Dhaka 1212, Bangladesh\",\n      \"LatLng\": {\n        \"Latitude\": 23.781947,\n        \"Longitude\": 90.400584\n      },\n      \"CustomLoc\": true\n    },\n    \"InsuranceType\": \"Minimum\",\n    \"DeliveryNeeded\": false,\n    \"PickUpNeeded\": false,\n    \"CouponCode\": \"\",\n    \"UserID\": \"006cc6c0-7a5c-4f36-b2ef-22b37c087231\",\n    \"GuestUserID\": \"\",\n    \"HostUserID\": \"\",\n    \"BookingRequestTimer\": \"2025-02-28T08:22:53.375Z\",\n    \"CarLocation\": {\n      \"Address\": \"4 Mohakhali C/A, Dhaka 1212, Bangladesh\",\n      \"FormattedAddress\": \"4 Mohakhali C/A, Dhaka 1212, Bangladesh\",\n      \"LatLng\": {\n        \"Latitude\": 23.781947,\n        \"Longitude\": 90.400584\n      },\n      \"CustomLoc\": true\n    },\n    \"SuccessURL\": \"\",\n    \"FailedURL\": \"\"\n  }\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:10000/v1/booking.BookingService/GetPricing",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "10000",
+							"path": [
+								"v1",
+								"booking.BookingService",
+								"GetPricing"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Misc",
+			"item": [
+				{
+					"name": "ZOHO",
+					"item": [
+						{
+							"name": "CallZohoAPI",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NjY3Mzk3NDksImlzcyI6IlJpZGVBbGlrZSIsInN1YiI6ImViNzY1Zjg4LTFiMTMtNDZlMC1iMGU1LTU0NWFjMmQ3Y2I0NCIsIlVzZXJJRCI6ImViNzY1Zjg4LTFiMTMtNDZlMC1iMGU1LTU0NWFjMmQ3Y2I0NCIsIlByb2ZpbGVJRCI6Ijg5NjY0ODExLWEwYzYtNDNmZi04MzY5LTY0ZTViYzI2OTg4NiIsIlJvbGVzIjpbInVzZXIiXX0.N3N8JkPOyl7yMW0UOws_vtWIGl2MxQRk4ug0_8Sup_0",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"Method\": \"POST\",\n    \"ModuleName\": \"User_Report\",\n    \"Action\": \"upsert\",\n    \"Payload\": \"{\\\"data\\\": [{\\\"ProfileID\\\": \\\"123\\\", \\\"Email\\\": \\\"fahad@gmail.com\\\", \\\"Name\\\": \\\"123\\\"}]}\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:10006/v1/misc.MiscService/CallZohoAPI",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "10006",
+									"path": [
+										"v1",
+										"misc.MiscService",
+										"CallZohoAPI"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "ExchangeZohoAuthCode",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NjcwODM5OTgsImlzcyI6IlJpZGVBbGlrZSIsInN1YiI6ImRmOTRhZjIyLTBhYTgtNGE1Mi1iOTE5LTkwYzNmNjBiZGYzOCIsIlVzZXJJRCI6ImRmOTRhZjIyLTBhYTgtNGE1Mi1iOTE5LTkwYzNmNjBiZGYzOCIsIlByb2ZpbGVJRCI6IjM1MTA4ZDQxLWYwMDAtNDAwMi04NjU0LTk3MDBjN2E3OTNiZSIsIlJvbGVzIjpbInVzZXIiLCJhZG1pbiJdfQ.YJgdHCVHfB23OLx7Eu9UYCAm7rWfXBNIMfxn5LmUnAQ",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"AuthCode\": \"1000.7a24a2b8f8fcedcab0b5f1dc0a285e74.600a050a8b1c9ac7435047e58d13f4b5\",\n    \"RedirectURI\": \"https://dev.admin.ridealike.com/dashboard\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://api.dev.ridealike.com/v1/misc.MiscService/ExchangeZohoAuthCode",
+									"protocol": "https",
+									"host": [
+										"api",
+										"dev",
+										"ridealike",
+										"com"
+									],
+									"path": [
+										"v1",
+										"misc.MiscService",
+										"ExchangeZohoAuthCode"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetZohoAuthURL",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NjcwOTM3NzMsImlzcyI6IlJpZGVBbGlrZSIsInN1YiI6ImRmOTRhZjIyLTBhYTgtNGE1Mi1iOTE5LTkwYzNmNjBiZGYzOCIsIlVzZXJJRCI6ImRmOTRhZjIyLTBhYTgtNGE1Mi1iOTE5LTkwYzNmNjBiZGYzOCIsIlByb2ZpbGVJRCI6IjM1MTA4ZDQxLWYwMDAtNDAwMi04NjU0LTk3MDBjN2E3OTNiZSIsIlJvbGVzIjpbInVzZXIiLCJhZG1pbiJdfQ.a-KiQe5aWzXe4viUfDFyF_TN_zxfVc-FuRPpyYNl630",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"RedirectURI\": \"https://dev.admin.ridealike.com/zoho\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://api.stage.ridealike.com/v1/misc.MiscService/GetZohoAuthURL",
+									"protocol": "https",
+									"host": [
+										"api",
+										"stage",
+										"ridealike",
+										"com"
+									],
+									"path": [
+										"v1",
+										"misc.MiscService",
+										"GetZohoAuthURL"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "ZohoSignInTrack",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NjczNTIwMzgsImlzcyI6IlJpZGVBbGlrZSIsInN1YiI6ImViNzY1Zjg4LTFiMTMtNDZlMC1iMGU1LTU0NWFjMmQ3Y2I0NCIsIlVzZXJJRCI6ImViNzY1Zjg4LTFiMTMtNDZlMC1iMGU1LTU0NWFjMmQ3Y2I0NCIsIlByb2ZpbGVJRCI6Ijg5NjY0ODExLWEwYzYtNDNmZi04MzY5LTY0ZTViYzI2OTg4NiIsIlJvbGVzIjpbInVzZXIiLCJhZG1pbiJdfQ.lU4chLgtYYmCrgXrSUQWigb2zPP-BOYQ1MG5_xKIADA",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://api.dev.ridealike.com/v1/misc.MiscService/ZohoSignInTrack",
+									"protocol": "https",
+									"host": [
+										"api",
+										"dev",
+										"ridealike",
+										"com"
+									],
+									"path": [
+										"v1",
+										"misc.MiscService",
+										"ZohoSignInTrack"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "ZohoRevokeSync",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NjczNTIwMzgsImlzcyI6IlJpZGVBbGlrZSIsInN1YiI6ImViNzY1Zjg4LTFiMTMtNDZlMC1iMGU1LTU0NWFjMmQ3Y2I0NCIsIlVzZXJJRCI6ImViNzY1Zjg4LTFiMTMtNDZlMC1iMGU1LTU0NWFjMmQ3Y2I0NCIsIlByb2ZpbGVJRCI6Ijg5NjY0ODExLWEwYzYtNDNmZi04MzY5LTY0ZTViYzI2OTg4NiIsIlJvbGVzIjpbInVzZXIiLCJhZG1pbiJdfQ.lU4chLgtYYmCrgXrSUQWigb2zPP-BOYQ1MG5_xKIADA",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://api.dev.ridealike.com/v1/misc.MiscService/ZohoRevokeSync",
+									"protocol": "https",
+									"host": [
+										"api",
+										"dev",
+										"ridealike",
+										"com"
+									],
+									"path": [
+										"v1",
+										"misc.MiscService",
+										"ZohoRevokeSync"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "StartZohoTripSync",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NzIyNTk1ODYsImlzcyI6IlJpZGVBbGlrZSIsInN1YiI6IjAwNmNjNmMwLTdhNWMtNGYzNi1iMmVmLTIyYjM3YzA4NzIzMSIsIlVzZXJJRCI6IjAwNmNjNmMwLTdhNWMtNGYzNi1iMmVmLTIyYjM3YzA4NzIzMSIsIlByb2ZpbGVJRCI6IjFlMDQxY2VjLWU2YzAtNDFlNy04ZGMwLTIxM2JlZDI0ZWU5NSIsIlJvbGVzIjpbInVzZXIiLCJhZG1pbiJdfQ.BTLgNfYkgT_RK51lPiLPHR7UI8BuXwREWIdbv7IymAM",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"TripIDs\": [\n        // \"c1be465c-3a97-43c2-bfc0-2720af86f0d4\",\n        // \"9d7c3220-9e31-47d1-b5bd-926f44c812c4\",\n        // \"4b1b6327-cc71-4992-8da1-bb1c53ac3467\",\n        // \"9ff45051-a00f-4cff-8291-a5ab3af1709d\",\n        // \"d0ac4e0a-79fc-4791-bbd1-a7e48fb72d8f\",\n        // \"a9a523fd-7fc5-4a20-9ad0-19ef1b492884\",\n        // \"9609ec9c-b114-4c3a-89db-646536098484\",\n        // \"fbef4dd1-22f9-4082-86d5-b695349d9af4\",\n        // \"ee01c979-d92f-479b-a7df-42dfaa385331\",\n        // \"43ce2e26-b1e5-435f-9799-84ccb2b78ff3\",\n        // \"6ecd56ce-c6a1-4b7e-971c-682e94c776dc\",\n        // \"afa8dce5-5e29-406b-a4c1-4119b75214d2\",\n        // \"3ccb7e9b-03cb-4eaa-9ded-8d9db9445905\",\n        // \"8726de9d-5cb4-4a08-9694-774f862f7195\",\n        // \"9aaacb11-4141-4034-87ed-f4fd8e963351\",\n        // \"d7d36dd8-bdc5-4110-ad9e-ee1e8d87ca57\"\n        \"60d7ce88-f35f-4596-abbf-a1428a8a0ec6\"\n    ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:10011/v1/trip.TripService/StartZohoTripSync",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "10011",
+									"path": [
+										"v1",
+										"trip.TripService",
+										"StartZohoTripSync"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "StartZohoCarSync",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NzIyNTk1ODYsImlzcyI6IlJpZGVBbGlrZSIsInN1YiI6IjAwNmNjNmMwLTdhNWMtNGYzNi1iMmVmLTIyYjM3YzA4NzIzMSIsIlVzZXJJRCI6IjAwNmNjNmMwLTdhNWMtNGYzNi1iMmVmLTIyYjM3YzA4NzIzMSIsIlByb2ZpbGVJRCI6IjFlMDQxY2VjLWU2YzAtNDFlNy04ZGMwLTIxM2JlZDI0ZWU5NSIsIlJvbGVzIjpbInVzZXIiLCJhZG1pbiJdfQ.BTLgNfYkgT_RK51lPiLPHR7UI8BuXwREWIdbv7IymAM",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"CarIDs\": [\n        \"003531f6-55ba-4880-984c-2cfc46ca88e9\",\n        \"f94395c4-f86d-4f34-9a93-f59aca8e5a4f\",\n        \"0f1af006-8950-46f0-95fb-a609c9e98569\",\n        \"5ffa3fec-96fa-4bb0-8744-7272add2b09f\",\n        \"3f74a0e8-2029-48af-8b76-1491d391350e\",\n        \"d52922e4-d9f2-45d7-b5b6-309ec1c8b0e5\",\n        \"3d07fd5d-f7d0-4d19-a245-2f47da0ece28\",\n        \"6966e9ab-3d1c-4708-8d98-00e73ab0cca8\",\n        \"4353be88-e5bd-4ece-86b0-ba811099fddc\",\n        \"4cddf7a0-0729-474a-9fd3-4ff34b9c6d86\",\n        \"41492fd3-6196-45f8-ae35-03af76c92682\",\n        \"ffe5daff-1bcb-4176-9456-e0b13dcb718d\",\n        \"6d8ae95d-5fe6-4b19-8f26-b9a92e8e3e71\",\n        \"86f9b291-1b0b-4173-bfd1-dd78481b87d5\",\n        \"f29b3cf7-f5d6-4692-98f6-eb364bcc3c1e\"\n    ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:10002/v1/car.CarService/StartZohoCarSync",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "10002",
+									"path": [
+										"v1",
+										"car.CarService",
+										"StartZohoCarSync"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "StartZohoProfileSync",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NzIyNTk1ODYsImlzcyI6IlJpZGVBbGlrZSIsInN1YiI6IjAwNmNjNmMwLTdhNWMtNGYzNi1iMmVmLTIyYjM3YzA4NzIzMSIsIlVzZXJJRCI6IjAwNmNjNmMwLTdhNWMtNGYzNi1iMmVmLTIyYjM3YzA4NzIzMSIsIlByb2ZpbGVJRCI6IjFlMDQxY2VjLWU2YzAtNDFlNy04ZGMwLTIxM2JlZDI0ZWU5NSIsIlJvbGVzIjpbInVzZXIiLCJhZG1pbiJdfQ.BTLgNfYkgT_RK51lPiLPHR7UI8BuXwREWIdbv7IymAM",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"ProfileIDs\": [\n        \"df861c19-a50f-4d89-ad8e-90a6548699f0\",\n        \"8fb1cc1f-37d6-4261-96b1-2f75153eb6ca\",\n        \"ff0de2d2-cd18-416a-bc8e-e472f7d27297\",\n        \"1e041cec-e6c0-41e7-8dc0-213bed24ee95\",\n        \"b3ade940-ccbc-471f-88d5-823aaa3a0494\",\n        \"06d50c91-1bc0-4c7d-a97d-d999907c0cd6\",\n        \"eb651c2c-36d7-44d4-85c0-8e01b4dce45b\",\n        \"08407c29-f8e1-4d6f-8a0a-1db0d08c1d3d\",\n        \"96ef1ec2-033b-4762-bf33-960bbb6ec840\",\n        \"9ad5f535-e426-4f6f-8596-7f0025361f27\",\n        \"bb15dc03-3eb7-41c5-9dcb-1aec5e9bd0c2\",\n        \"3f5482f7-fcc1-446d-a7cd-6439b1f85235\",\n        \"c5eecb80-d747-4ebb-b477-77a54e18ea5e\",\n        \"cf758c75-705b-4087-ad4d-fdc3dfb619d0\",\n        \"914cc96d-2e5d-4d3c-9bc4-a726df28a006\"\n    ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:10009/v1/profile.ProfileService/StartZohoProfileSync",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "10009",
+									"path": [
+										"v1",
+										"profile.ProfileService",
+										"StartZohoProfileSync"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "GetAllHeardOptions",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"HeardOptionID\": \"52ddf18a-ab30-4488-a0ba-01ba9fe83207\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://api.test.ridealike.com/v1/misc.MiscService/GetAllHeardOptions",
+							"protocol": "http",
+							"host": [
+								"api",
+								"test",
+								"ridealike",
+								"com"
+							],
+							"path": [
+								"v1",
+								"misc.MiscService",
+								"GetAllHeardOptions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetDashboard",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NzI2MTkyMDUsImlzcyI6IlJpZGVBbGlrZSIsInN1YiI6ImViNzY1Zjg4LTFiMTMtNDZlMC1iMGU1LTU0NWFjMmQ3Y2I0NCIsIlVzZXJJRCI6ImViNzY1Zjg4LTFiMTMtNDZlMC1iMGU1LTU0NWFjMmQ3Y2I0NCIsIlByb2ZpbGVJRCI6Ijg5NjY0ODExLWEwYzYtNDNmZi04MzY5LTY0ZTViYzI2OTg4NiIsIlJvbGVzIjpbInVzZXIiLCJhZG1pbiJdfQ.NrAsl4B2WMV5bA50BR4jBBYRxPHqkQBdYY6o5S0Rc6k",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:10006/v1/misc.MiscService/GetDashboard",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "10006",
+							"path": [
+								"v1",
+								"misc.MiscService",
+								"GetDashboard"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetAllCoupons",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NzI2MTkyMDUsImlzcyI6IlJpZGVBbGlrZSIsInN1YiI6ImViNzY1Zjg4LTFiMTMtNDZlMC1iMGU1LTU0NWFjMmQ3Y2I0NCIsIlVzZXJJRCI6ImViNzY1Zjg4LTFiMTMtNDZlMC1iMGU1LTU0NWFjMmQ3Y2I0NCIsIlByb2ZpbGVJRCI6Ijg5NjY0ODExLWEwYzYtNDNmZi04MzY5LTY0ZTViYzI2OTg4NiIsIlJvbGVzIjpbInVzZXIiLCJhZG1pbiJdfQ.NrAsl4B2WMV5bA50BR4jBBYRxPHqkQBdYY6o5S0Rc6k",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:10006/v1/misc.MiscService/GetAllCoupons",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "10006",
+							"path": [
+								"v1",
+								"misc.MiscService",
+								"GetAllCoupons"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"Email\": \"fahad.dev8@yopmail.com\",\n  \"Password\": \"Ridealike1234\",\n  \"FirstName\": \"Fahad\",\n  \"LastName\": \"Pathan\",\n  \"PromoAccepted\": true,\n  \"HeardFrom\": \"Pathan\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://api.dev.ridealike.com/v1/user.UserService/Register",
+							"protocol": "http",
+							"host": [
+								"api",
+								"dev",
+								"ridealike",
+								"com"
+							],
+							"path": [
+								"v1",
+								"user.UserService",
+								"Register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SendRemainderV2",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NzEzMjE0OTMsImlzcyI6IlJpZGVBbGlrZSIsInN1YiI6IjAwNmNjNmMwLTdhNWMtNGYzNi1iMmVmLTIyYjM3YzA4NzIzMSIsIlVzZXJJRCI6IjAwNmNjNmMwLTdhNWMtNGYzNi1iMmVmLTIyYjM3YzA4NzIzMSIsIlByb2ZpbGVJRCI6IjFlMDQxY2VjLWU2YzAtNDFlNy04ZGMwLTIxM2JlZDI0ZWU5NSIsIlJvbGVzIjpbInVzZXIiLCJhZG1pbiJdfQ.74S2vBMW-csHduJ7wvYvmM_UMtzf3RoEP8hupcsUQNI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"UserIDs\": [\n    \"006cc6c0-7a5c-4f36-b2ef-22b37c087231\",\n    \"de0d906d-9bfe-46b2-a137-9e41ace4bbc1\",\n    \"1105c559-57c8-485c-b54c-d681ed1ee42d\",\n    \"16414957-1fc6-4cb7-8581-730696b8fe2d\"\n  ],\n  \"SMSTitle\": \"testz\",\n  \"SMSBody\": \"testz\",\n  \"NotificationTitle\": \"testz\",\n  \"NotificationBody\": \"testz\",\n  \"EmailTitle\": \"testz\",\n  \"EmailBody\": \"<b>Bold text</b>, <i>italic text</i>, and <span style='color:red;'>Red text</span>\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://api.dev.ridealike.com/v1/user.UserService/SendRemainderV2",
+							"protocol": "http",
+							"host": [
+								"api",
+								"dev",
+								"ridealike",
+								"com"
+							],
+							"path": [
+								"v1",
+								"user.UserService",
+								"SendRemainderV2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\n// {\n//     \"Email\": \"fahad.hostferrari.dev.bs@yopmail.com\",\n//     \"Password\": \"Ridealike1234\"\n// }\n{\n    \"Email\": \"fahad.dev.bs@yopmail.com\",\n    \"Password\": \"Ridealike1234\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://api.test.ridealike.com/v1/user.UserService/Login",
+					"protocol": "http",
+					"host": [
+						"api",
+						"test",
+						"ridealike",
+						"com"
+					],
+					"path": [
+						"v1",
+						"user.UserService",
+						"Login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login Copy",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"Email\": \"a0@yopmail.com\",\n    //\"Email\": \"sqatst@yopmail.com\",\n  \"Password\": \"Ridealike1234\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://api.user.stg.ridealike.com/v1/user.UserService/Login",
+					"protocol": "http",
+					"host": [
+						"api",
+						"user",
+						"stg",
+						"ridealike",
+						"com"
+					],
+					"path": [
+						"v1",
+						"user.UserService",
+						"Login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpcommingTrip",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"Limit\": \"100\",\n    \"Skip\": \"0\",\n    // \"UserID\": \"9676ea1f-5861-41f3-88bc-054018a7a902\",\n    \"UserID\": \"8a0998eb-9550-4fa1-8b29-e95047a1b198\",\n    // \"TripStatusGroup\": \"UpcommingInProgress\",\n    // \"TripStatusGroup\": \"Upcoming\",\n    \"TripStatusGroup\": \"Current\",\n    // \"TripStatusGroup\": \"Past\",\n    \"CarID\": \"\",\n    \"HostUserID\": \"\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://api.trip.stg.ridealike.com/v1/trip.TripService/GetAllUserTripsByStatusGroup",
+					"protocol": "http",
+					"host": [
+						"api",
+						"trip",
+						"stg",
+						"ridealike",
+						"com"
+					],
+					"path": [
+						"v1",
+						"trip.TripService",
+						"GetAllUserTripsByStatusGroup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpcommingTrip Copy",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"Limit\": \"100\",\n    \"Skip\": \"0\",\n    // \"UserID\": \"9676ea1f-5861-41f3-88bc-054018a7a902\",\n    \"UserID\": \"8a0998eb-9550-4fa1-8b29-e95047a1b198\",\n    // \"TripStatusGroup\": \"UpcommingInProgress\",\n    // \"TripStatusGroup\": \"Upcoming\",\n    \"TripStatusGroup\": \"Current\",\n    // \"TripStatusGroup\": \"Past\",\n    \"CarID\": \"\",\n    \"HostUserID\": \"\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://api.trip.stg.ridealike.com/v1/trip.TripService/GetAllUserTripsByStatusGroup",
+					"protocol": "http",
+					"host": [
+						"api",
+						"trip",
+						"stg",
+						"ridealike",
+						"com"
+					],
+					"path": [
+						"v1",
+						"trip.TripService",
+						"GetAllUserTripsByStatusGroup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpcommingTrip HOST",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NjU0NTE4NTMsImlzcyI6IlJpZGVBbGlrZSIsInN1YiI6ImFiZjM1NGQ1LTE0ZDMtNGM5Yy1hY2RiLTI0NGZhZDgwNGIxZCIsIlVzZXJJRCI6ImFiZjM1NGQ1LTE0ZDMtNGM5Yy1hY2RiLTI0NGZhZDgwNGIxZCIsIlByb2ZpbGVJRCI6IjJiOWRkYzNjLTY5MGEtNGYzMy04Y2JkLWQ1ZTdlNzZjM2E4ZiIsIlJvbGVzIjpbInVzZXIiXX0.ZWtXkY3sIn2LB3owVCxqg9JV8EWJwCpjlj808Ce29ko",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"Limit\": \"100\",\n    \"Skip\": \"0\",\n    \"UserID\": \"de0d906d-9bfe-46b2-a137-9e41ace4bbc1\",\n    \"TripStatusGroup\": \"UpcommingInProgress\",\n    \"CarID\": \"\",\n    \"HostUserID\": \"de0d906d-9bfe-46b2-a137-9e41ace4bbc1\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:10011/v1/trip.TripService/GetAllUserTripsByStatusGroup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "10011",
+					"path": [
+						"v1",
+						"trip.TripService",
+						"GetAllUserTripsByStatusGroup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpcommingTrip HOST Copy",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NTUyOTA5MjMsImlzcyI6IlJpZGVBbGlrZSIsInN1YiI6Ijk2NzZlYTFmLTU4NjEtNDFmMy04OGJjLTA1NDAxOGE3YTkwMiIsIlVzZXJJRCI6Ijk2NzZlYTFmLTU4NjEtNDFmMy04OGJjLTA1NDAxOGE3YTkwMiIsIlByb2ZpbGVJRCI6IjEwZGZhYTY3LTE3NzYtNGFiNS04NmI0LThkN2E4OTJiNjU5ZCIsIlJvbGVzIjpbInVzZXIiXX0.tqMYA_BTys1E9gCuufKiY9F87DeJRLOp-J50XrDU65c",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"Limit\": \"100\",\n    \"Skip\": \"0\",\n    \"UserID\": \"9676ea1f-5861-41f3-88bc-054018a7a902\",\n    \"TripStatusGroup\": \"UpcommingInProgress\",\n    \"CarID\": \"\",\n    \"HostUserID\": \"9676ea1f-5861-41f3-88bc-054018a7a902\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://api.trip.stg.ridealike.com/v1/trip.TripService/GetAllUserTripsByStatusGroup",
+					"protocol": "http",
+					"host": [
+						"api",
+						"trip",
+						"stg",
+						"ridealike",
+						"com"
+					],
+					"path": [
+						"v1",
+						"trip.TripService",
+						"GetAllUserTripsByStatusGroup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "initManualBooking",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NTUyODgzNzcsImlzcyI6IlJpZGVBbGlrZSIsInN1YiI6IjhhMDk5OGViLTk1NTAtNGZhMS04YjI5LWU5NTA0N2ExYjE5OCIsIlVzZXJJRCI6IjhhMDk5OGViLTk1NTAtNGZhMS04YjI5LWU5NTA0N2ExYjE5OCIsIlByb2ZpbGVJRCI6IjdkYTk3YTU1LTE4YzgtNGI4OS05ZjQ5LWUxMjRmYTJmYjcyMyIsIlJvbGVzIjpbInVzZXIiXX0.lrReWs8aOGEuSAsrbJpvLL4qEwhTjKmMC1rd2Af_T4o",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"BookingParams\": {\n    \"CarID\": \"b9a0c42b-f180-4fad-bef1-70cf25eb6a59\",\n    \"StartDateTime\": \"2024-12-02T14:00:00.000Z\",\n    \"EndDateTime\": \"2024-12-04T18:00:00.000Z\",\n    \"PickupReturnLocation\": {\n      \"Address\": \"Gulshan 1, Dhaka, Bangladesh\",\n      \"FormattedAddress\": \"Gulshan 1, Dhaka 1212, Bangladesh\",\n      \"Locality\": \"Dhaka\",\n      \"Region\": \"\",\n      \"PostalCode\": \"1212\",\n      \"LatLng\": {\n        \"Latitude\": 23.7820624,\n        \"Longitude\": 90.4160527,\n        \"FormattedAddress\": \"\"\n      },\n      \"Notes\": \"\",\n      \"Geo_Point\": {\n        \"Type\": \"Point\",\n        \"Coordinates\": [\n          90.4160527,\n          23.7820624\n        ]\n      }\n    },\n    \"MasterReturnLocation\": {\n      \"Address\": \"Gulshan 1, Dhaka, Bangladesh\",\n      \"FormattedAddress\": \"Gulshan 1, Dhaka 1212, Bangladesh\",\n      \"Locality\": \"Dhaka\",\n      \"Region\": \"\",\n      \"PostalCode\": \"1212\",\n      \"LatLng\": {\n        \"Latitude\": 23.7820624,\n        \"Longitude\": 90.4160527,\n        \"FormattedAddress\": \"\"\n      },\n      \"Notes\": \"\",\n      \"Geo_Point\": {\n        \"Type\": \"Point\",\n        \"Coordinates\": [\n          90.4160527,\n          23.7820624\n        ]\n      }\n    },\n    \"InsuranceType\": \"Minimum\",\n    \"DeliveryNeeded\": false,\n    \"PickUpNeeded\": false,\n    \"CouponCode\": \"\",\n    \"UserID\": \"bf1fa8c7-c26e-462f-87db-893e3c2d3dcf\",\n    \"CarLocation\": {\n      \"Address\": \"Gulshan 1, Dhaka, Bangladesh\",\n      \"FormattedAddress\": \"Gulshan 1, Dhaka 1212, Bangladesh\",\n      \"Locality\": \"Dhaka\",\n      \"Region\": \"\",\n      \"PostalCode\": \"1212\",\n      \"LatLng\": {\n        \"Latitude\": 23.7820624,\n        \"Longitude\": 90.4160527,\n        \"FormattedAddress\": \"\"\n      },\n      \"Notes\": \"\",\n      \"Geo_Point\": {\n        \"Type\": \"Point\",\n        \"Coordinates\": [\n          90.4160527,\n          23.7820624\n        ]\n      }\n    },\n    \"SuccessURL\": \"https://stage.ridealike.com/page/trips?section=upcoming\",\n    \"FailedURL\": \"https://stage.ridealike.com/page/car-details/b9a0c42b-f180-4fad-bef1-70cf25eb6a59\",\n    \"BookingRequestTimer\": \"2024-11-27T13:24:12.022Z\"\n  }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://api.stage.ridealike.com/v1/booking.BookingService/InitManualBooking",
+					"protocol": "http",
+					"host": [
+						"api",
+						"stage",
+						"ridealike",
+						"com"
+					],
+					"path": [
+						"v1",
+						"booking.BookingService",
+						"InitManualBooking"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "initManualBooking Copy",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NTUyODgzNzcsImlzcyI6IlJpZGVBbGlrZSIsInN1YiI6IjhhMDk5OGViLTk1NTAtNGZhMS04YjI5LWU5NTA0N2ExYjE5OCIsIlVzZXJJRCI6IjhhMDk5OGViLTk1NTAtNGZhMS04YjI5LWU5NTA0N2ExYjE5OCIsIlByb2ZpbGVJRCI6IjdkYTk3YTU1LTE4YzgtNGI4OS05ZjQ5LWUxMjRmYTJmYjcyMyIsIlJvbGVzIjpbInVzZXIiXX0.lrReWs8aOGEuSAsrbJpvLL4qEwhTjKmMC1rd2Af_T4o",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"BookingParams\": {\n        \"CarID\": \"2fc65ecd-f7eb-47fb-9265-39f0527f57aa\",\n        \"StartDateTime\": \"2024-08-25T01:00:00.000Z\",\n        \"EndDateTime\": \"2024-08-25T18:00:00.000Z\",\n        \"PickupReturnLocation\": {\n            \"Address\": \"4 Banani Bridge, Dhaka 1212, Bangladesh\",\n            \"FormattedAddress\": \"4 Banani Bridge, Dhaka 1212, Bangladesh\",\n            \"LatLng\": {\n                \"Latitude\": 23.7908,\n                \"Longitude\": 90.4109\n            }\n        },\n        \"MasterReturnLocation\": {\n            \"Address\": \"4 Banani Bridge, Dhaka 1212, Bangladesh\",\n            \"FormattedAddress\": \"4 Banani Bridge, Dhaka 1212, Bangladesh\",\n            \"LatLng\": {\n                \"Latitude\": 23.7908,\n                \"Longitude\": 90.4109\n            }\n        },\n        \"InsuranceType\": \"Minimum\",\n        \"DeliveryNeeded\": false,\n        \"PickUpNeeded\": false,\n        \"CouponCode\": \"\",\n        \"UserID\": \"8a0998eb-9550-4fa1-8b29-e95047a1b198\",\n        \"BookingRequestTimer\": \"2024-08-25T18:04:06.420Z\"\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://api.booking.stg.ridealike.com/v1/booking.BookingService/InitManualBooking",
+					"protocol": "http",
+					"host": [
+						"api",
+						"booking",
+						"stg",
+						"ridealike",
+						"com"
+					],
+					"path": [
+						"v1",
+						"booking.BookingService",
+						"InitManualBooking"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AcceptManualBooking",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NTUzMzUyNTUsImlzcyI6IlJpZGVBbGlrZSIsInN1YiI6Ijk2NzZlYTFmLTU4NjEtNDFmMy04OGJjLTA1NDAxOGE3YTkwMiIsIlVzZXJJRCI6Ijk2NzZlYTFmLTU4NjEtNDFmMy04OGJjLTA1NDAxOGE3YTkwMiIsIlByb2ZpbGVJRCI6IjEwZGZhYTY3LTE3NzYtNGFiNS04NmI0LThkN2E4OTJiNjU5ZCIsIlJvbGVzIjpbInVzZXIiXX0.9jWPU393j3m9FH-QLlLAvOMiC6_F8TSmDIOfPkoOc9Q",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"BookingID\": \"78e6f32d-e994-451e-a31e-b038f6636072\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.booking.stg.ridealike.com/v1/booking.BookingService/AcceptManualBooking",
+					"protocol": "https",
+					"host": [
+						"api",
+						"booking",
+						"stg",
+						"ridealike",
+						"com"
+					],
+					"path": [
+						"v1",
+						"booking.BookingService",
+						"AcceptManualBooking"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AcceptManualBooking Copy",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NTUzMzUyNTUsImlzcyI6IlJpZGVBbGlrZSIsInN1YiI6Ijk2NzZlYTFmLTU4NjEtNDFmMy04OGJjLTA1NDAxOGE3YTkwMiIsIlVzZXJJRCI6Ijk2NzZlYTFmLTU4NjEtNDFmMy04OGJjLTA1NDAxOGE3YTkwMiIsIlByb2ZpbGVJRCI6IjEwZGZhYTY3LTE3NzYtNGFiNS04NmI0LThkN2E4OTJiNjU5ZCIsIlJvbGVzIjpbInVzZXIiXX0.9jWPU393j3m9FH-QLlLAvOMiC6_F8TSmDIOfPkoOc9Q",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"BookingID\": \"78e6f32d-e994-451e-a31e-b038f6636072\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.booking.stg.ridealike.com/v1/booking.BookingService/AcceptManualBooking",
+					"protocol": "https",
+					"host": [
+						"api",
+						"booking",
+						"stg",
+						"ridealike",
+						"com"
+					],
+					"path": [
+						"v1",
+						"booking.BookingService",
+						"AcceptManualBooking"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UploadCar",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "InitiBooking",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NTgyNzE1NjEsImlzcyI6IlJpZGVBbGlrZSIsInN1YiI6ImJiZmUxZWQ5LTNlYmEtNGM3MC05MWNmLWMwZDkyNzZkMmZjZCIsIlVzZXJJRCI6ImJiZmUxZWQ5LTNlYmEtNGM3MC05MWNmLWMwZDkyNzZkMmZjZCIsIlByb2ZpbGVJRCI6IjM4MzkzYTI2LWI2ZmYtNGJlZi1iYzIxLTg5YTZmMTZhN2VkZiIsIlJvbGVzIjpbInVzZXIiXX0.A42PBIJe0U42uTUQSA0aettHnwfGa-KvWOP83agnbvY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"BookingParams\": {\n    \"CarID\": \"d6a48e7e-abe9-471c-85c4-16a1a151193b\",\n    \"StartDateTime\": \"2024-09-20T18:00:00.000Z\",\n    \"EndDateTime\": \"2024-09-21T18:00:00.000Z\",\n    \"PickupReturnLocation\": {\n      \"Address\": \"Oslo, Norway\",\n      \"FormattedAddress\": \"Oslo, Norway\",\n      \"Locality\": \"Oslo\",\n      \"Region\": \"\",\n      \"PostalCode\": \"\",\n      \"LatLng\": {\n        \"Latitude\": 59.9138688,\n        \"Longitude\": 10.7522454,\n        \"FormattedAddress\": \"\"\n      },\n      \"Notes\": \"\",\n      \"Geo_Point\": {\n        \"Type\": \"Point\",\n        \"Coordinates\": [\n          10.7522454,\n          59.9138688\n        ]\n      }\n    },\n    \"MasterReturnLocation\": {\n      \"Address\": \"Oslo, Norway\",\n      \"FormattedAddress\": \"Oslo, Norway\",\n      \"Locality\": \"Oslo\",\n      \"Region\": \"\",\n      \"PostalCode\": \"\",\n      \"LatLng\": {\n        \"Latitude\": 59.9138688,\n        \"Longitude\": 10.7522454,\n        \"FormattedAddress\": \"\"\n      },\n      \"Notes\": \"\",\n      \"Geo_Point\": {\n        \"Type\": \"Point\",\n        \"Coordinates\": [\n          10.7522454,\n          59.9138688\n        ]\n      }\n    },\n    \"InsuranceType\": \"Minimum\",\n    \"DeliveryNeeded\": false,\n    \"PickUpNeeded\": false,\n    \"CouponCode\": \"DIPU\",\n    \"UserID\": \"bbfe1ed9-3eba-4c70-91cf-c0d9276d2fcd\",\n    \"CarLocation\": {\n      \"Address\": \"Oslo, Norway\",\n      \"FormattedAddress\": \"Oslo, Norway\",\n      \"Locality\": \"Oslo\",\n      \"Region\": \"\",\n      \"PostalCode\": \"\",\n      \"LatLng\": {\n        \"Latitude\": 59.9138688,\n        \"Longitude\": 10.7522454,\n        \"FormattedAddress\": \"\"\n      },\n      \"Notes\": \"\",\n      \"Geo_Point\": {\n        \"Type\": \"Point\",\n        \"Coordinates\": [\n          10.7522454,\n          59.9138688\n        ]\n      }\n    }\n  }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://0.0.0.0:10011/v1/booking.BookingService/InitBooking",
+					"protocol": "http",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "10011",
+					"path": [
+						"v1",
+						"booking.BookingService",
+						"InitBooking"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Save Deposit",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NTgyNzE1NjEsImlzcyI6IlJpZGVBbGlrZSIsInN1YiI6ImJiZmUxZWQ5LTNlYmEtNGM3MC05MWNmLWMwZDkyNzZkMmZjZCIsIlVzZXJJRCI6ImJiZmUxZWQ5LTNlYmEtNGM3MC05MWNmLWMwZDkyNzZkMmZjZCIsIlByb2ZpbGVJRCI6IjM4MzkzYTI2LWI2ZmYtNGJlZi1iYzIxLTg5YTZmMTZhN2VkZiIsIlJvbGVzIjpbInVzZXIiXX0.A42PBIJe0U42uTUQSA0aettHnwfGa-KvWOP83agnbvY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"BookingParams\": {\n    \"CarID\": \"d6a48e7e-abe9-471c-85c4-16a1a151193b\",\n    \"StartDateTime\": \"2024-09-20T18:00:00.000Z\",\n    \"EndDateTime\": \"2024-09-21T18:00:00.000Z\",\n    \"PickupReturnLocation\": {\n      \"Address\": \"Oslo, Norway\",\n      \"FormattedAddress\": \"Oslo, Norway\",\n      \"Locality\": \"Oslo\",\n      \"Region\": \"\",\n      \"PostalCode\": \"\",\n      \"LatLng\": {\n        \"Latitude\": 59.9138688,\n        \"Longitude\": 10.7522454,\n        \"FormattedAddress\": \"\"\n      },\n      \"Notes\": \"\",\n      \"Geo_Point\": {\n        \"Type\": \"Point\",\n        \"Coordinates\": [\n          10.7522454,\n          59.9138688\n        ]\n      }\n    },\n    \"MasterReturnLocation\": {\n      \"Address\": \"Oslo, Norway\",\n      \"FormattedAddress\": \"Oslo, Norway\",\n      \"Locality\": \"Oslo\",\n      \"Region\": \"\",\n      \"PostalCode\": \"\",\n      \"LatLng\": {\n        \"Latitude\": 59.9138688,\n        \"Longitude\": 10.7522454,\n        \"FormattedAddress\": \"\"\n      },\n      \"Notes\": \"\",\n      \"Geo_Point\": {\n        \"Type\": \"Point\",\n        \"Coordinates\": [\n          10.7522454,\n          59.9138688\n        ]\n      }\n    },\n    \"InsuranceType\": \"Minimum\",\n    \"DeliveryNeeded\": false,\n    \"PickUpNeeded\": false,\n    \"CouponCode\": \"DIPU\",\n    \"UserID\": \"bbfe1ed9-3eba-4c70-91cf-c0d9276d2fcd\",\n    \"CarLocation\": {\n      \"Address\": \"Oslo, Norway\",\n      \"FormattedAddress\": \"Oslo, Norway\",\n      \"Locality\": \"Oslo\",\n      \"Region\": \"\",\n      \"PostalCode\": \"\",\n      \"LatLng\": {\n        \"Latitude\": 59.9138688,\n        \"Longitude\": 10.7522454,\n        \"FormattedAddress\": \"\"\n      },\n      \"Notes\": \"\",\n      \"Geo_Point\": {\n        \"Type\": \"Point\",\n        \"Coordinates\": [\n          10.7522454,\n          59.9138688\n        ]\n      }\n    }\n  }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://0.0.0.0:10011/v1/booking.BookingService/InitBooking",
+					"protocol": "http",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "10011",
+					"path": [
+						"v1",
+						"booking.BookingService",
+						"InitBooking"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CancelTrip",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Trip",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"TripID\": \"5897f8ef-636c-4c20-adcb-f42c68bc10e4\",\n    \"StartDateTime\": \"2024-10-25T18:00:00.000Z\",\n    \"EndDateTime\": \"2024-10-26T18:00:00.000Z\",\n    \"ReturnLocation\": {\n        \"Address\": \"Oslo, Norway\",\n        \"FormattedAddress\": \"Oslo, Norway\",\n        \"LatLng\": {\n            \"Latitude\": 59.9138688,\n            \"Longitude\": 10.7522454\n        },\n        \"CustomLoc\": false\n    },\n    \"PickUpLocation\": {\n        \"Address\": \"Oslo, Norway\",\n        \"FormattedAddress\": \"Oslo, Norway\",\n        \"LatLng\": {\n            \"Latitude\": 59.9138688,\n            \"Longitude\": 10.7522454\n        },\n        \"CustomLoc\": false\n    },\n    \"force\": true\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://0.0.0.0:10011/v1/trip.TripService/CreateTripUpdateChange",
+					"protocol": "http",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "10011",
+					"path": [
+						"v1",
+						"trip.TripService",
+						"CreateTripUpdateChange"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Trip Copy",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"TripID\": \"5897f8ef-636c-4c20-adcb-f42c68bc10e4\",\n    \"StartDateTime\": \"2024-10-25T18:00:00.000Z\",\n    \"EndDateTime\": \"2024-10-26T18:00:00.000Z\",\n    \"ReturnLocation\": {\n        \"Address\": \"Oslo, Norway\",\n        \"FormattedAddress\": \"Oslo, Norway\",\n        \"LatLng\": {\n            \"Latitude\": 59.9138688,\n            \"Longitude\": 10.7522454\n        },\n        \"CustomLoc\": false\n    },\n    \"PickUpLocation\": {\n        \"Address\": \"Oslo, Norway\",\n        \"FormattedAddress\": \"Oslo, Norway\",\n        \"LatLng\": {\n            \"Latitude\": 59.9138688,\n            \"Longitude\": 10.7522454\n        },\n        \"CustomLoc\": false\n    },\n    \"force\": true\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://0.0.0.0:10011/v1/trip.TripService/CreateTripUpdateChange",
+					"protocol": "http",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "10011",
+					"path": [
+						"v1",
+						"trip.TripService",
+						"CreateTripUpdateChange"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Accept trip Change",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"TripID\": \"5897f8ef-636c-4c20-adcb-f42c68bc10e4\",\n    \"StartDateTime\": \"2024-10-25T18:00:00.000Z\",\n    \"EndDateTime\": \"2024-10-26T18:00:00.000Z\",\n    \"ReturnLocation\": {\n        \"Address\": \"Oslo, Norway\",\n        \"FormattedAddress\": \"Oslo, Norway\",\n        \"LatLng\": {\n            \"Latitude\": 59.9138688,\n            \"Longitude\": 10.7522454\n        },\n        \"CustomLoc\": false\n    },\n    \"PickUpLocation\": {\n        \"Address\": \"Oslo, Norway\",\n        \"FormattedAddress\": \"Oslo, Norway\",\n        \"LatLng\": {\n            \"Latitude\": 59.9138688,\n            \"Longitude\": 10.7522454\n        },\n        \"CustomLoc\": false\n    },\n    \"force\": true\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://0.0.0.0:10011/v1/trip.TripService/CreateTripUpdateChange",
+					"protocol": "http",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "10011",
+					"path": [
+						"v1",
+						"trip.TripService",
+						"CreateTripUpdateChange"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update User Address",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"TripID\": \"5897f8ef-636c-4c20-adcb-f42c68bc10e4\",\n    \"StartDateTime\": \"2024-10-25T18:00:00.000Z\",\n    \"EndDateTime\": \"2024-10-26T18:00:00.000Z\",\n    \"ReturnLocation\": {\n        \"Address\": \"Oslo, Norway\",\n        \"FormattedAddress\": \"Oslo, Norway\",\n        \"LatLng\": {\n            \"Latitude\": 59.9138688,\n            \"Longitude\": 10.7522454\n        },\n        \"CustomLoc\": false\n    },\n    \"PickUpLocation\": {\n        \"Address\": \"Oslo, Norway\",\n        \"FormattedAddress\": \"Oslo, Norway\",\n        \"LatLng\": {\n            \"Latitude\": 59.9138688,\n            \"Longitude\": 10.7522454\n        },\n        \"CustomLoc\": false\n    },\n    \"force\": true\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://0.0.0.0:10011/v1/trip.TripService/CreateTripUpdateChange",
+					"protocol": "http",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "10011",
+					"path": [
+						"v1",
+						"trip.TripService",
+						"CreateTripUpdateChange"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NTcxNDkwMDAsImlzcyI6IlJpZGVBbGlrZSIsInN1YiI6ImJiZmUxZWQ5LTNlYmEtNGM3MC05MWNmLWMwZDkyNzZkMmZjZCIsIlVzZXJJRCI6ImJiZmUxZWQ5LTNlYmEtNGM3MC05MWNmLWMwZDkyNzZkMmZjZCIsIlByb2ZpbGVJRCI6IjM4MzkzYTI2LWI2ZmYtNGJlZi1iYzIxLTg5YTZmMTZhN2VkZiIsIlJvbGVzIjpbInVzZXIiXX0.XUlZ2Xag4tIqRlIWOcXOFgl3kVgxWjF3zdU66dRFrJs",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
