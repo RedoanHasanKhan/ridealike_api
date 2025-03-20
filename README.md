@@ -69,4 +69,4 @@ To change:
 
 ## 📧 Support
 
-For any issues or queries, please contact `fahadpathan56@gmail.com`.
+For any issues or queries, please contact 'redoankhan777@gmail.com'.
